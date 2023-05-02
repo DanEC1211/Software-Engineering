@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" sizes="180x180" href="Logo/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="Logo/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="Logo/favicon-16x16.png">
+	<link rel="manifest" href="Logo/site.webmanifest">
+	<title>Iniciar Sesion</title>
+	<link rel="stylesheet"  type="text/css" href="CSS/css_LogIn.css">
+</head>
+<body>
+    
+    <main>
+        <div id="ima">
+            <a href="javascript: history.go(-1)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                Regresar
+            </a>
+        </div>
+        <div id="login_container">
+            <div id="img"><a href="Index.html"><img src="/Media/Banner.png" alt=""></a></div>
+            <form>
+                <p>Iniciar Sesion</p> 
+                <h3 id="feedback">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-alert-triangle"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" x2="12" y1="9" y2="13"></line><line x1="12" x2="12.01" y1="17" y2="17"></line></svg>
+                     Ups!. Las credenciales son incorrectas, Intentalo nuevamente
+                </h3>
+                <label for="email">Correo electronico</label>
+                <input class="text"  type="text" name="email" required/>
+                <label for="cont_user">Contraseña</label>
+                <input class="text" type="password" name="cont_user"
+                 required/>
+                <div id="button">
+                    <a href="ChangePass.html">¿Olvidaste tu contraseña?</a>
+                    <input id="Sub" type="submit" value="Ingresar"/>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
