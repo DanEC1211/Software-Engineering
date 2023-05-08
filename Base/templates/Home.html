@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'Logo/apple-touch-icon.png' %}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{% static 'Logo/favicon-32x32.png' %}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{% static 'Logo/favicon-16x16.png' %}">
+	<link rel="manifest" href="{% static 'Logo/site.webmanifest' %}">
+    <link rel="stylesheet"  type="text/css" href="{% static 'CSS/css_Home.css' %}">
+    
+    <title>Creciendo Juntos</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/#Nosotros">¿Quienes somos?</a>
+      <a href="/#Instalaciones">Instalaciones</a>
+
+    </nav>
+    <a id="Logo"title="Guarderia ABC" href="Alert/WIP">
+      <img src="{% static 'media/logo_name.png' %}" id="imlogo">
+    </a>
+    <nav>
+      <a href="Home">Eventos</a>
+      <a href="/#Servicios">Servicios</a>
+      <a id="iniciar_sesion" href="LogIn">Iniciar Sesion</a>
+    </nav>
+  </header>
+  <main>
+    <div id="blank_space">
+      We love TS 
+    </div>
+  </main>
+</body>
+</html>
