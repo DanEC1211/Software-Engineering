@@ -1,0 +1,91 @@
+/*Ventana Flotante*/
+
+.shadow{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.46);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.1px);
+  -webkit-backdrop-filter: blur(12.1px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  display: none;
+  pointer-events: none;
+}
+
+.shadow.show{
+  display: flex;
+  pointer-events: auto;
+}
+
+.shadow .float_window{
+  width: 306px;
+  height: 458px;
+  background: #0d3b66;
+  border-radius: 20px;
+  color: #F2F2F2;
+}
+
+.shadow .float_window svg{
+  position: relative;
+  float: right;
+  right:10px;
+  top:14px;
+
+}
+
+.shadow .float_window .box_message{
+
+  position: relative;
+  top: 40px;
+  width: 70%;
+  left: 15%;
+  text-align: center;
+  font-size: 16pt;
+}
+
+.shadow .float_window .option{
+  background: #13538f;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.option form {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.option form label div{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 7px;
+}
+
+
+
+/* HIDE RADIO */
+.option form [type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+.option form  [type=radio] + div {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+.option form  [type=radio]:checked + div {
+  outline: 5px solid #F2F2F2;
+}
+

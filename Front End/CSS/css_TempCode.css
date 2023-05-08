@@ -57,91 +57,22 @@ main{
   flex-direction: column;
   justify-content:space-around;
   align-items: center;
+}
+
+.messenge {
+  width: 75%;
 
 }
 
-#login_container form h1{
-  font-family: 'Roboto Bold';
-  font-size: 35pt;
-  margin-bottom: 25px;
-}
-
-#descrip{
-  font-family: 'Roboto Regular';
-  font-size: 14pt;
-  margin-bottom: 25px;
-  width: 100%;
-}
-
-#login_container form {
-  display: flex;
-	flex-direction: column;
-	align-items:flex-start;
-	font-size: 14pt;
-  height: 60%;
-  width: 73%;
-}
-
-form input.text{
-	font-family: 'Roboto Medium';
-  margin: 5px;
-	color: #0d3b66;
-	padding: 5px;
-	width: 25px;
-	height: 40px;
-  margin-top: 10px;
-  margin-bottom: 5px;
-	border: 3px solid #E0E0E0;
-  text-align: center;
-	border-radius: 12px;
-  background-color: #f2f2f2;
-  font-size: 20pt;
-  
-}
-
-#temporal {
-  display: flex;
-	flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 15px 0px;
-}
-
-#clave{
-  width: 75px;
-}
-
-#temporal p{
-  margin:0px 2px;
-  color: #0d3b66;
-  font-family: 'Roboto Medium';
-  font-size: 40pt;
-  vertical-align: top;
-}
-
-
-input.text:focus {
-  outline: none !important;
-  border:3px solid #0d3b66;
-}
-
-label {
-	font-family: 'Roboto Regular';
-  margin-top: 10px;
-  margin-bottom: 5px;
-  font-size: 14pt;
-}
-
-#button{
+.opciones{
   display: flex;
   justify-content: end;
   align-items: center;
-  width: 100%;
-  margin-top: 10px;
-
+  height: 50px;
+  margin-top:40px ;
 }
-#button input{
+
+.opciones a {
   margin:10px;
   font-family: 'Roboto Regular';
 	background-color: #0d3b66;
@@ -154,18 +85,20 @@ label {
 	border-radius: 15px;
   margin-right: 0px;
   color: #f2f2f2;
+  text-decoration: none;
 }
 
-#button a{
-    display: flex;
-    text-decoration: none;
-    color: #0d3b66;
-    font-family: 'Roboto Medium';
-    font-size: 12pt;
-    height: 15px;
-    padding: 5px;
-    margin: 5px;
-    
+.messenge h1{
+  font-family: 'Roboto Bold';
+  font-size: 35pt;
+  margin-bottom: 25px;
+}
+
+.messenge p{
+  font-family: 'Roboto Regular';
+  font-size: 14pt;
+  margin-bottom: 25px;
+  width: 100%;
 }
 
 
@@ -286,13 +219,6 @@ label {
       margin-left: 5 px;
       color:#202020;
     }
-    
-    #button{
-      flex-wrap: wrap;
-    }
-
-    #button a {
-      font-size: 11pt;
-    }
+  
 
   }

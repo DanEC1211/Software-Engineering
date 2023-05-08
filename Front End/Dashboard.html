@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="Logo/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="Logo/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="Logo/favicon-16x16.png">
-	<link rel="manifest" href="Logo/site.webmanifest">
-    <link rel="stylesheet"  type="text/css" href="CSS/css_Dashboard.css">
-    
-    <title>Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="Logo/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Logo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Logo/favicon-16x16.png">
+  <link rel="manifest" href="Logo/site.webmanifest">
+  <link rel="stylesheet"  type="text/css" href="CSS/generalities.css">
+  <link rel="stylesheet"  type="text/css" href="CSS/bgs.css">
+  <link rel="stylesheet"  type="text/css" href="CSS/changebg.css">
+  <link rel="stylesheet"  type="text/css" href="CSS/menu.css"> 
+  <link rel="stylesheet"  type="text/css" href="CSS/css_Dashboard.css">
+  
+  <title>Dashboard</title>
 </head>
 <body>
   <div  class="shadow">
@@ -239,54 +243,8 @@
       </div>
     </aside>
   </main>
-  <script>
-    let btn = document.querySelector("#btn");
-    let sidebar = document.querySelector(".sidebar");
-    let searchbtn = document.querySelector("#ico-search");
-
-    let body=document.querySelector("body");;
-    let bclose = document.querySelector("#cls");
-    let winfloat = document.querySelector(".shadow");
-    let ch_bg = document.querySelector("#ch_bg");
-
-
-    btn.onclick = function(){
-      sidebar.classList.toggle("active");
-    }
-
-    searchbtn.onclick = function(){
-      sidebar.classList.toggle("active");
-    }
-
-    bclose.onclick = function(){
-      winfloat.classList.toggle("show");
-    }
-
-    bclose.onclick = function(){
-      winfloat.classList.remove("show");
-    }
-
-    
-
-    ch_bg.onclick = function(){
-      winfloat.classList.add("show");
-    }
-
-    let data = null;
-    const radios= document.getElementsByName('bgs');
-    function chg_bg(){
-      for(var i=0; i< radios.length;i++){
-        if(radios[i].checked){
-          data = radios[i].value;
-        }
-      }
-      body.className="";
-      body.classList.add('bg_'+data);
-    }      
-
-    
-
-  </script>
+  <script src="Javascript/js_menu.js"></script>
+  <script src="Javascript/js_changebg.js"></script>
 </body>
 </html>
     

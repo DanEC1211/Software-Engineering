@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="Logo/apple-touch-icon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="Logo/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="Logo/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="Logo/favicon-16x16.png">
+  <link rel="stylesheet"  type="text/css" href="CSS/generalities.css">
 	<link rel="manifest" href="Logo/site.webmanifest">
-    <link rel="stylesheet"  type="text/css" href="CSS/css_attendance.css">
-    
-    <title>Dashboard</title>
+
+  <link rel="stylesheet"  type="text/css" href="CSS/generalities.css">
+  <link rel="stylesheet"  type="text/css" href="CSS/bgs.css">
+  <link rel="stylesheet"  type="text/css" href="CSS/menu.css">  
+  <link rel="stylesheet"  type="text/css" href="CSS/css_attendance.css">
+  
+  <title>Pase de lista</title>
 </head>
-<body class="bg_2">
+<body class="bg_0">
   <div class="sidebar">
     <div class="logo_content">
       <div class="logo">
@@ -81,8 +86,8 @@
     <section class="list">
       <div class="attendance_container">
         <div class="attence_info">
-          <h1></h1>
-          <p></p>
+          <h1>Turno matutino de Maternal 1</h1>
+          <p>Lista de asistencia del salon, recuerde que puede deshacer cambios antes de una hora despues de que el menor haya ingresado al plantel.</p>
         </div>
         <div class="attendence_list">
           <div class="enlisted">
@@ -93,19 +98,19 @@
           </div>
           <div class="enlisted">
             <span class="child">
-              Juan Perez
+              Esponda Cervantes Alfredo Daniel
             </span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-contact"><path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><circle cx="12" cy="10" r="2"></circle><line x1="8" x2="8" y1="2" y2="4"></line><line x1="16" x2="16" y1="2" y2="4"></line></svg>
           </div>
           <div class="enlisted">
             <span class="child">
-              Juan Perez
+              Martinez Barragan Martin
             </span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-contact"><path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><circle cx="12" cy="10" r="2"></circle><line x1="8" x2="8" y1="2" y2="4"></line><line x1="16" x2="16" y1="2" y2="4"></line></svg>
           </div>
           <div class="enlisted">
             <span class="child">
-              Juan Perez
+              Santiago Morales Andrea Karina
             </span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-contact"><path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><circle cx="12" cy="10" r="2"></circle><line x1="8" x2="8" y1="2" y2="4"></line><line x1="16" x2="16" y1="2" y2="4"></line></svg>
           </div>
@@ -113,21 +118,7 @@
       </div>  
     </section>
   </main>
-  <script>
-    let btn = document.querySelector("#btn");
-    let sidebar = document.querySelector(".sidebar");
-    let searchbtn = document.querySelector("#ico-search");
-    
-
-    btn.onclick = function(){
-      sidebar.classList.toggle("active");
-    }
-
-    searchbtn.onclick = function(){
-      sidebar.classList.toggle("active");
-    }
-
-  </script>
+  <script src="Javascript/js_menu.js"></script>
 </body>
 </html>
     
