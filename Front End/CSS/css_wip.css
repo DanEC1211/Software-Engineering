@@ -31,8 +31,8 @@ body{
 
 h1 {
     background: linear-gradient(90deg, #ffa585, #ffeda0);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 	font-size: 40pt;
 	font-family: Roboto Black;
 	width: 80%;
@@ -79,67 +79,4 @@ svg{
 	width: 220px;
   stroke:  #ffa886;
 
-}
-
-
-/*Importación de fuentes*/
-
-@font-face {
-  font-family: 'Roboto Black';
-  src: url('../Fonts/Roboto/Roboto-Black.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto Black Itaic';
-  src: url('../Fonts/Roboto/Roboto-BlackItalic.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto Bold';
-  src: url('../Fonts/Roboto/Roboto-Bold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto Bold Itaic';
-  src: url('../Fonts/Roboto/Roboto-BoldItalic.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto Italic';
-  src: url('../Fonts/Roboto/Roboto-Italic.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto Light';
-  src: url('../Fonts/Roboto/Roboto-Light.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto Light Italic';
-  src: url('../Fonts/Roboto/Roboto-LightItalic.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto Medium';
-  src: url('../Fonts/Roboto/Roboto-Medium.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto Medium Italic';
-  src: url('../Fonts/Roboto/Roboto-MediumItalic.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto Regular';
-  src: url('../Fonts/Roboto/Roboto-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto Thin';
-  src: url('../Fonts/Roboto/Roboto-Thin.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto Thin';
-  src: url('../Fonts/Roboto/Roboto-ThinItalic.ttf') format('truetype');
 }
