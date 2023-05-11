@@ -1,17 +1,18 @@
+<!-- {% load static %} -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="apple-touch-icon" sizes="180x180" href="Logo/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="Logo/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="Logo/favicon-16x16.png">
-	<link rel="manifest" href="Logo/site.webmanifest">
+	<link rel="apple-touch-icon" sizes="180x180" href="Logo/apple-touch-icon.png"> <!-- {% static 'Logo/apple-touch-icon.png' %} -->
+	<link rel="icon" type="image/png" sizes="32x32" href="Logo/favicon-32x32.png"> <!-- {% static 'Logo/favicon-32x32.png' %} -->
+	<link rel="icon" type="image/png" sizes="16x16" href="Logo/favicon-16x16.png"> <!-- {% static 'Logo/favicon-16x16.png' %} -->
+	<link rel="manifest" href="Logo/site.webmanifest"> <!-- {% static 'Logo/site.webmanifest' %} -->
+    <link rel="stylesheet"  type="text/css" href="CSS/generalities.css"> <!-- {% static 'CSS/generalities.css' %} -->
+	<link rel="stylesheet"  type="text/css" href="CSS/css_TempCode.css"> <!-- {% static 'CSS/css_TempCode.css' %} -->
 	<title>Correo enviado</title>
-	<link rel="stylesheet"  type="text/css" href="CSS/css_TempCode.css">
 </head>
 <body>
-    
     <main>
         <div id="ima">
             <a href="javascript: history.go(-1)">
@@ -22,9 +23,9 @@
         <div id="login_container">
             <div class="messenge">
                 <h1>El correo se ha enviado</h1>
-                <p>Te hemos enviado un link de recuperacón a [], desde ahi podras continuar el proceso de recuperación. </p>
+                <p>Te hemos enviado un link de recuperacón a [], desde ahi podras continuar el proceso de recuperación. </p> <!--WIP: se requiere extraer el correo que se entrego anteriormente en ChangePass.html-->
                 <div class="opciones">
-                    <a href="LogIn.html"> Iniciar sesion</a>
+                    <a href="LogIn.html"> Iniciar sesion</a> <!-- {%  %} -->
                 </div>
             </div>           
         </div>

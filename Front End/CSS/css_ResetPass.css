@@ -75,17 +75,16 @@ main{
 
 form input.text{
 	font-family: 'Roboto Regular';
-	color: #202020;
-	padding: 5px;
-	width: 98%;
-	height: 46px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-	border: 3px solid #E0E0E0;
-	border-radius: 8px;
-  background-color: #f2f2f2;
-  font-size: 14pt;
-  
+    color: #202020;
+    padding: 5px;
+    width: 98%;
+    height: 46px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 3px solid #E0E0E0;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    font-size: 14pt;
 }
 
 
@@ -150,7 +149,27 @@ label {
 }
 
 
- 
+#feedback{
+  display: flex;
+  margin:10px 0px;
+  font-size: 14pt;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Roboto thin';
+  color: #f03636;
+  letter-spacing: 2px;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+}
+
+.hidden{
+  display: none !important;
+} 
+
+#feedback svg{
+ margin-right: 20px;
+}
 
 
  @media (max-width:1200px) {

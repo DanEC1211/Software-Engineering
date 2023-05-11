@@ -1,15 +1,22 @@
+<!--WIP: Realizar la validaciones necesarias 
+    para realizar el cambio de contraseña e 
+    insertarlo en la base de datos.
+-->
+
+<!-- {% load static %} -->
 <!DOCTYPE html>
 <html lang="es">
+<!-- {% if validlink %} -->
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="apple-touch-icon" sizes="180x180" href="Logo/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="Logo/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="Logo/favicon-16x16.png">
-	<link rel="manifest" href="Logo/site.webmanifest">
+	<link rel="apple-touch-icon" sizes="180x180" href="Logo/apple-touch-icon.png"> <!-- {% static 'Logo/apple-touch-icon.png' %} -->
+	<link rel="icon" type="image/png" sizes="32x32" href="Logo/favicon-32x32.png"> <!-- {% static 'Logo/favicon-32x32.png' %} -->
+	<link rel="icon" type="image/png" sizes="16x16" href="Logo/favicon-16x16.png"> <!-- {% static 'Logo/favicon-16x16.png' %} -->
+	<link rel="manifest" href="Logo/site.webmanifest"> <!-- {% static 'Logo/site.webmanifest' %} -->
+    <link rel="stylesheet"  type="text/css" href="CSS/generalities.css"> <!-- {% static 'CSS/generalities.css' %} -->
+	<link rel="stylesheet"  type="text/css" href="CSS/css_ResetPass.css"> <!-- {% static 'CSS/css_ResetPass.css' %} -->
 	<title>Nueva Contraseña</title>
-    <link rel="stylesheet"  type="text/css" href="CSS/generalities.css">
-	<link rel="stylesheet"  type="text/css" href="CSS/css_ResetPass.css">
 </head>
 <body>
     
@@ -26,9 +33,13 @@
                 <h1>Nueva contraseña</h1> 
                 <p id="descrip">Ingresa una contraseña segura con un minimo de 8 caracteres alfanumericos</p>
                 <label for="new_pass">Nueva contraseña</label>
-                <input class="text"  type="text" name="new_pass" required/>
+                <input class="text" id="new_pass"  type="text" name="new_pass" required/>
                 <label for="validate">Confirmar contraseña</label>
-                <input class="text"  type="text" name="vilidate" required/>
+                <input class="text" id="validate"  type="text" name="validate" required/>
+                <h3 id="feedback" class="hidden"> <!-- WIP: Mensaje a definir y documentar, añadir comportamiento -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-slash"><line x1="9" x2="15" y1="15" y2="9"></line><circle cx="12" cy="12" r="10"></circle></svg>
+                    Las contraseñas no coinciden, Intentalo nuevamente
+                </h3>
                 <div id="button">
                     <input id="Sub" type="submit" value="Cambiar"/>
                 </div>

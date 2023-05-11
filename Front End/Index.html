@@ -1,32 +1,33 @@
+<!-- {% load static %} -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="Logo/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="Logo/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="Logo/favicon-16x16.png">
-	<link rel="manifest" href="Logo/site.webmanifest">
-  <link rel="stylesheet"  type="text/css" href="CSS/generalities.css">
-  <link rel="stylesheet"  type="text/css" href="CSS/css_index.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="Logo/apple-touch-icon.png"> <!-- {% static 'Logo/apple-touch-icon.png' %} -->
+	<link rel="icon" type="image/png" sizes="32x32" href="Logo/favicon-32x32.png"> <!-- {% static 'Logo/favicon-32x32.png' %} -->   
+	<link rel="icon" type="image/png" sizes="16x16" href="Logo/favicon-16x16.png"> <!-- {% static 'Logo/favicon-16x16.png' %} -->   
+	<link rel="manifest" href="Logo/site.webmanifest"> <!-- {% static 'Logo/site.webmanifest' %} -->    
+  <link rel="stylesheet"  type="text/css" href="CSS/generalities.css"> <!-- {% static 'CSS/generalities.css' %} -->     
+  <link rel="stylesheet"  type="text/css" href="CSS/css_index.css"> <!-- {% static 'CSS/css_index.css' %} -->        
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <title>Creciendo Juntos</title>
 </head>
 <body>
   <header>
     <nav>
-      <a href="Index.html#Nosotros">¿Quienes somos?</a>
+      <a href="#Nosotros">¿Quienes somos?</a>
       
-      <a href="Index.html#Instalaciones">Instalaciones</a>
+      <a href="#Instalaciones">Instalaciones</a>
 
     </nav>
-    <a id="Logo"title="Guarderia ABC" href="index.html">
-      <img src="media/logo_name.png" id="imlogo">
+    <a id="Logo"title="Guarderia ABC" href="/">
+      <img src="Media/Banner.png" id="imlogo"> <!-- {% static 'Media/Banner.png'%} -->
     </a>
     <nav>
-      <a href="Home.html">Eventos</a>
-      <a href="Index.html#Servicios">Servicios</a>
-      <a id="iniciar_sesion" href="LogIn.html">Iniciar Sesion</a>
+      <a href="Home.html">Eventos</a> <!-- Home -->
+      <a href="#Servicios">Servicios</a> 
+      <a id="iniciar_sesion" href="LogIn.html">Iniciar Sesion</a> <!-- LogIn --> 
     </nav>
   </header>
   <main>
@@ -37,63 +38,45 @@
       <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button> <!--Tambien se debe añadir un boton por cada evento a mostrar-->
+          <!-- Ejemplos:
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          -->
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <a href="/Alert/WIP.html">
+          <!--WIP: Esta seccion es generada por el back end para crear cada pantalla del carrusel por cada evento importante en la base de datos-->
+          <!-- INICIA PLANTILLA ACTIVE-->
+          <div class="carousel-item active"> <!--Active indica el primer evento a mostrar, asignar siempre al mas reciente en la base de datos-->
+            <a href="Alert/WIP.html">
             <picture>
-              <source media="(min-width: 1300px)" srcset="Media/nwsls1.jpg">
-              <source media="(min-width: 750px)" srcset="Media/nws1.jpg">
-              <img src="Media/nwss1.jpg" class="d-block w-100" alt="IfItDoesntMatchAnyMedia">
+              <source media="(min-width: 1300px)" srcset="Media/nwsls1.jpg"> <!-- {% static 'Media/nwsls1.jpg' %} -->
+              <source media="(min-width: 750px)" srcset="Media/nws1.jpg"> <!-- {% static 'Media/nws1.jpg' %} -->  
+              <img src="Media/nwss1.jpg" class="d-block w-100" alt="IfItDoesntMatchAnyMedia"> <!-- {% static 'Media/nwss1.jpg' %} -->
             </picture>
             <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
+              <h5>First slide label</h5> <!-- WIP: Insertar el Titulo del evento-->
+              <p>Some representative placeholder content for the first slide.</p> <!-- WIP: Insertar la descripción del evento -->
             </div>
             </a>
           </div>
+          <!--TERMINA PLANTILLA ACTIVE-->
+          <!--INICA PLANTILLA-->
           <div class="carousel-item">
-            <a href="/Alert/WIP.html">
+            <a href="Alert/WIP.html">
             <picture>
-              <source media="(min-width: 1300px)" srcset="Media/nwsls2.jpg">
-              <source media="(min-width: 750px)" srcset="Media/nws2.jpg">
-              <img src="Media/nwss2.jpg" class="d-block w-100" alt="IfItDoesntMatchAnyMedia">
+              <source media="(min-width: 1300px)" srcset="Media/nwsls2.jpg"> <!-- {% static 'Media/nwsls2.jpg' %} -->
+              <source media="(min-width: 750px)" srcset="Media/nws2.jpg"> <!-- {% static 'Media/nws2.jpg' %} -->  
+              <img src="Media/nwss2.jpg" class="d-block w-100" alt="IfItDoesntMatchAnyMedia"> <!-- {% static 'Media/nwss2.jpg' %} -->
+
             </picture>
             <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
+              <h5>Second slide label</h5> <!-- WIP: Insertar el Titulo del evento-->
+              <p>Some representative placeholder content for the first slide.</p> <!-- WIP: Insertar la descripción del evento -->
             </div>
             </a>
           </div>
-          <div class="carousel-item">
-            <a href="/Alert/WIP.html">
-              <picture>
-                <source media="(min-width: 1300px)" srcset="Media/nwsls3.jpg">
-                <source media="(min-width: 750px)" srcset="Media/nws3.jpg">
-                <img src="Media/nwss3.jpg" class="d-block w-100" alt="IfItDoesntMatchAnyMedia">
-              </picture>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
-            </a>
-          </div>
-          <div class="carousel-item">
-            <a href="/Alert/WIP.html">
-              <picture>
-                <source media="(min-width: 1300px)" srcset="Media/nwsls4.jpg">
-                <source media="(min-width: 750px)" srcset="Media/nws4.jpg">
-                <img src="Media/nwss4.jpg" class="d-block w-100" alt="IfItDoesntMatchAnyMedia">
-              </picture>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Fourth slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
-          </a>
-          </div>
+          <!--TERMINA PLANTILLA-->
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -114,19 +97,19 @@
         Nuestro equipo está compuesto por profesionales altamente capacitados en el cuidado infantil, pedagogía y psicología infantil, quienes trabajan día a día para brindar a los pequeños la mejor atención y formación. Nos aseguramos de ofrecer un ambiente seguro y de apoyo para los niños y sus familias, creando una comunidad de padres, maestros y personal de apoyo.
       </p>
       <div id="our_team">
-        <a href="Alert/WIP.html">
+        <a href="Alert/WIP.html"> <!-- WIP: No son links que aun esten listos -->
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-baby"><path d="M9 12h.01"></path><path d="M15 12h.01"></path><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"></path><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"></path></svg>
           Cuidadxres
         </a>
-        <a href="Alert/WIP.html">
+        <a href="Alert/WIP.html"> <!-- WIP: No son links que aun esten listos -->
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cross"><path d="M11 2a2 2 0 0 0-2 2v5H4a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h5v5c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-5h5a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-5V4a2 2 0 0 0-2-2h-2z"></path></svg>
           Medicxs
         </a>
-        <a href="Alert/WIP.html">
+        <a href="Alert/WIP.html"> <!-- WIP: No son links que aun esten listos -->
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-salad"><path d="M7 21h10"></path><path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z"></path><path d="M11.38 12a2.4 2.4 0 0 1-.4-4.77 2.4 2.4 0 0 1 3.2-2.77 2.4 2.4 0 0 1 3.47-.63 2.4 2.4 0 0 1 3.37 3.37 2.4 2.4 0 0 1-1.1 3.7 2.51 2.51 0 0 1 .03 1.1"></path><path d="m13 12 4-4"></path><path d="M10.9 7.25A3.99 3.99 0 0 0 4 10c0 .73.2 1.41.54 2"></path></svg>
           Nutricionistas
         </a>
-        <a href="Alert/WIP.html">
+        <a href="Alert/WIP.html"> <!-- WIP: No son links que aun esten listos -->
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
           Pedagogxs
         </a>
@@ -139,7 +122,7 @@
       </p>
     </div>
 
-    <div id="Servicios" >
+    <div id="Servicios">
       <p id="serv_desc">
         Ofrecemos una amplia variedad de servicios para satisfacer las necesidades de los niños y sus familias. Nos enfocamos en brindar una experiencia completa, no solo en cuanto al cuidado de los pequeños, sino también en cuanto a su desarrollo integral.
 
@@ -147,43 +130,43 @@
       </p>
       <div id="Services">
         <div class="bubble_info">
-          <a href="Alert/WIP.html">
-            <img src="Media/serv_1.jpg" alt="">
+          <a href="Alert/WIP.html"> <!-- WIP: No son links que aun esten listos -->
+            <img src="Media/serv_1.jpg" alt=""> <!-- {% static 'Media/serv_1.jpg' %} -->           
             <h3>Cuidado infantil</h3>
           </a>
           <p>contamos con un equipo altamente capacitado en el cuidado infantil, que se asegura de brindar un ambiente seguro, acogedor y lleno de amor para los niños y niñas.</p>
         </div>
         <div class="bubble_info">
-          <a href="Alert/WIP.html">
-            <img src="Media/serv_2.jpg" alt="">
+          <a href="Alert/WIP.html"> <!-- WIP: No son links que aun esten listos -->
+            <img src="Media/serv_2.jpg" alt=""> <!-- {% static 'Media/serv_2.jpg' %} -->           
             <h3>Educación infantil</h3>
           </a>
           <p>ofrecemos programas educativos diseñados para promover el desarrollo cognitivo, emocional, físico y social de los niños y niñas. Utilizamos metodologías innovadoras y creativas para fomentar la curiosidad y el aprendizaje.</p>
         </div>
         <div class="bubble_info">
-          <a href="Alert/WIP.html">
-            <img src="Media/serv_3.jpg" alt="">
+          <a href="Alert/WIP.html"> <!-- WIP: No son links que aun esten listos -->
+            <img src="Media/serv_3.jpg" alt=""> <!-- {% static 'Media/serv_3.jpg' %} -->           
             <h3>Alimentación</h3>
           </a>
           <p>nos aseguramos de ofrecer una dieta balanceada y nutritiva para los pequeños, adaptada a sus necesidades y preferencias.</p>
         </div>        
         <div class="bubble_info">
-          <a href="Alert/WIP.html">
-            <img src="Media/serv_4.jpg" alt="">
+          <a href="Alert/WIP.html"> <!-- WIP: No son links que aun esten listos -->
+            <img src="Media/serv_4.jpg" alt=""> <!-- {% static 'Media/serv_4.jpg %} -->           
             <h3>Actividades extra-curriculares</h3>
           </a>
           <p>entendemos que cada niño es único y tiene necesidades individuales, por lo que nos aseguramos de ofrecer una atención personalizada y adaptada a las necesidades de cada pequeño.</p>
         </div>
         <div class="bubble_info">
-          <a href="Alert/WIP.html">
-            <img src="Media/serv_5.jpg" alt="">
+          <a href="Alert/WIP.html"> <!-- WIP: No son links que aun esten listos -->
+            <img src="Media/serv_5.jpg" alt=""> <!-- {% static 'Media/serv_5.jpg' %} -->           
             <h3>Atención personalizada</h3>
           </a>
           <p>ofrecemos una amplia variedad de actividades y talleres para complementar la educación y el desarrollo de los niños y niñas, tales como música, arte, deportes y más.</p>
         </div>
         <div class="bubble_info">
-          <a href="Alert/WIP.html">
-            <img src="Media/serv_6.jpg" alt="">
+          <a href="Alert/WIP.html"> <!-- WIP: No son links que aun esten listos -->
+            <img src="Media/serv_6.jpg" alt=""> <!-- {% static 'Media/serv_6.jpg' %} -->           
             <h3>Comunicación y seguimiento</h3>
           </a>
           <p>fomentamos una comunicación abierta y transparente con los padres, manteniéndolos informados sobre el progreso y desarrollo de sus hijos e hijas.</p>

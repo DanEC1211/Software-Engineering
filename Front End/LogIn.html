@@ -1,15 +1,16 @@
+<!-- {% load static %} -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="apple-touch-icon" sizes="180x180" href="Logo/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="Logo/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="Logo/favicon-16x16.png">
-	<link rel="manifest" href="Logo/site.webmanifest">
+	<link rel="apple-touch-icon" sizes="180x180" href="Logo/apple-touch-icon.png"> <!-- {% static 'Logo/apple-touch-icon.png' %} -->
+	<link rel="icon" type="image/png" sizes="32x32" href="Logo/favicon-32x32.png"> <!-- {% static 'Logo/favicon-32x32.png' %} -->
+	<link rel="icon" type="image/png" sizes="16x16" href="Logo/favicon-16x16.png"> <!-- {% static 'Logo/favicon-16x16.png' %} -->
+	<link rel="manifest" href="Logo/site.webmanifest"> <!-- {% static '' %} -->
 	<title>Iniciar Sesion</title>
-    <link rel="stylesheet"  type="text/css" href="CSS/generalities.css">
-	<link rel="stylesheet"  type="text/css" href="CSS/css_LogIn.css">
+    <link rel="stylesheet"  type="text/css" href="CSS/generalities.css"> <!-- {% static 'CSS/generalities.css' %} -->
+	<link rel="stylesheet"  type="text/css" href="CSS/css_LogIn.css"> <!-- {% static 'CSS/css_LogIn.css' %} -->
 </head>
 <body>
     
@@ -21,20 +22,20 @@
             </a>
         </div>
         <div id="login_container">
-            <div id="img"><a href="Index.html"><img src="/Media/Banner.png" alt=""></a></div>
+            <div id="img"><a href="Index.html"><img src="Media/Banner.png" alt=""></a></div> <!-- {% static 'Media/Banner.png'%} -->
             <form>
                 <p>Iniciar Sesion</p> 
-                <h3 id="feedback">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-slash"><line x1="9" x2="15" y1="15" y2="9"></line><circle cx="12" cy="12" r="10"></circle></svg>
-                    Las credenciales que proporcionaste son incorrectas, Intentalo nuevamente
-                </h3>
                 <label for="email">Correo electronico</label>
                 <input class="text"  type="text" name="email" required/>
                 <label for="cont_user">Contraseña</label>
                 <input class="text" type="password" name="cont_user"
-                 required/>
+                required/>
+                <h3 id="feedback" class="hidden"> <!-- WIP: Mensaje a definir y documentar, añadir comportamiento -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-slash"><line x1="9" x2="15" y1="15" y2="9"></line><circle cx="12" cy="12" r="10"></circle></svg>
+                    Las credenciales que proporcionaste son incorrectas, Intentalo nuevamente
+                </h3>
                 <div id="button">
-                    <a href="ChangePass.html">¿Olvidaste tu contraseña?</a>
+                    <a href="ChangePass.html">¿Olvidaste tu contraseña?</a> <!-- {%  %} -->
                     <input id="Sub" type="submit" value="Ingresar"/>
                 </div>
             </form>

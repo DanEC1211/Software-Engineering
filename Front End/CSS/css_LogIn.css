@@ -69,21 +69,25 @@ main{
 
 #feedback{
   display: flex;
-  background-color: rgba(240, 54, 54, 1);
-  margin-bottom: 25px;
-  font-size: 12pt;
+  margin:10px 0px;
+  font-size: 14pt;
   padding: 10px 20px;
   border-radius: 10px;
   font-family: 'Roboto thin';
-  color: #f2f2f2;
+  color: #f03636;
   letter-spacing: 2px;
   flex-flow: row nowrap;
   align-items: center;
+  width: 100%;
 }
 
 #feedback svg{
  margin-right: 20px;
 }
+
+.hidden {
+  display: none !important;
+} 
 
 form input.text{
 	font-family: 'Roboto Regular';

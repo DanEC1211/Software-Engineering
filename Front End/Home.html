@@ -1,32 +1,34 @@
+<!--WIP: Esta pagina aun esta en fase concptual no es un buena idea usarla por el momento-->
+<!-- {% load static %} -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="Logo/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="Logo/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="Logo/favicon-16x16.png">
-	<link rel="manifest" href="Logo/site.webmanifest">
-  <link rel="stylesheet"  type="text/css" href="CSS/generalities.css">
-  <link rel="stylesheet"  type="text/css" href="CSS/bgs.css">
-  <link rel="stylesheet"  type="text/css" href="CSS/css_Home.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="Logo/apple-touch-icon.png"> <!-- {% static 'Logo/apple-touch-icon.png' %} -->
+	<link rel="icon" type="image/png" sizes="32x32" href="Logo/favicon-32x32.png"> <!-- {% static 'Logo/favicon-32x32.png' %} -->   
+	<link rel="icon" type="image/png" sizes="16x16" href="Logo/favicon-16x16.png"> <!-- {% static 'Logo/favicon-16x16.png' %} -->       
+	<link rel="manifest" href="Logo/site.webmanifest">  <!-- {% static 'Logo/site.webmanifest' %} -->    
+  <link rel="stylesheet"  type="text/css" href="CSS/generalities.css">  <!-- {% static 'CSS/generalities.css' %} -->     
+  <link rel="stylesheet"  type="text/css" href="CSS/bgs.css">  <!-- {% static 'CSS/bgs.css' %} -->    
+  <link rel="stylesheet"  type="text/css" href="CSS/css_Home.css">  <!-- {% static 'CSS/css_Home.css' %} -->    
   
   <title>Creciendo Juntos</title>
 </head>
 <body>
   <header>
     <nav>
-      <a href="Index.html#Nosotros">¿Quienes somos?</a>
-      <a href="Index.html#Instalaciones">Instalaciones</a>
+      <a href="/#Nosotros">¿Quienes somos?</a>
+      <a href="/#Instalaciones">Instalaciones</a>
 
     </nav>
-    <a id="Logo"title="Guarderia ABC" href="index.html">
-      <img src="media/logo_name.png" id="imlogo">
+    <a id="Logo" title="Creciendo Juntos main page" href="/">   <!-- {% static 'Index.html' %} -->    
+      <img src="media/Banner.png" id="imlogo">  <!-- {% static 'media/Banner.png' %} -->    
     </a>
     <nav>
-      <a href="Home.html">Eventos</a>
-      <a href="Index.html#Servicios">Servicios</a>
-      <a id="iniciar_sesion" href="LogIn.html">Iniciar Sesion</a>
+      <a href="Home.html">Eventos</a> <!-- Home -->
+      <a href="/#Servicios">Servicios</a>
+      <a id="iniciar_sesion" href="LogIn.html">Iniciar Sesion</a>  <!-- LogIn -->    
     </nav>
   </header>
   <main>
