@@ -1,0 +1,248 @@
+body{
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    overflow:auto;
+}
+
+main{
+    position: absolute;
+    width: calc(100% - 78px);
+    left:78px;
+    display: flex;
+    flex-direction: column;
+    transition: all .5s ease;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/*Diseños particulares*/
+main .report{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  
+  flex-wrap: wrap;
+  background-color: #E5E5E5;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.report_container{
+  display: flex;
+  flex-direction: column;
+  margin: 5px 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 100px);
+}
+
+.report_data {
+  margin: 30px 0px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.report_info img{
+    width: 150px;
+    border-radius: 50%;
+}
+
+.report_info{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.report_info p{
+  margin-top: 20px;
+}
+
+.report_info h1{
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.report_info h2{
+    margin-top: 10px;
+}
+
+.report_data{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.report_data h2{
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.report_data input{
+	font-family: 'Roboto Regular';
+	color: #202020;
+	padding: 5px;
+	height: 46px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+	border: 3px solid #E0E0E0;
+	border-radius: 8px;
+  background-color: #f2f2f2;
+  font-size: 14pt;
+  margin-right: 10px;
+}
+
+.report_data input:focus {
+  outline: none !important;
+  border:3px solid #0d3b66;
+}
+
+.report_data textarea:focus {
+  outline: none !important;
+  border:3px solid #0d3b66;
+}
+
+.report_data label{
+  margin: 20px 10px;
+}
+
+.report_data textarea{
+	font-family: 'Roboto Regular';
+	color: #202020;
+	padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+	border: 3px solid #E0E0E0;
+	border-radius: 8px;
+  background-color: #f2f2f2;
+  font-size: 14pt;
+  resize: none;
+  width: 75%;
+  height: 150px;
+}
+
+.report_data input[type=number] {
+  width: 70px;
+}
+
+/*Doctor*/
+
+#detalles{
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  align-items: center;
+}
+
+#diagnostico{
+  height: 100px;
+}
+
+#presion {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: 20px 10px;
+}
+
+#presion input{
+  margin: 0px;
+}
+
+#presion p {
+  font-size:28pt;
+  margin: 5px;
+  font-family: 'Roboto thin';
+}
+
+#presion h2{
+  margin-right: 15px;
+}
+
+
+
+
+/*Profesor*/
+
+.block{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.block h2{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: 'Roboto Medium';
+}
+
+#emo_titulo{
+  margin-top: 20px;
+}
+
+.comida_op{
+  width: 120px;
+}
+
+/*emotionbox*/
+#emoseccion{
+	width: 80%;
+  max-width: 600px;
+	display: flex;
+	margin: 15px;
+	background-color: #f2f2f2;
+  border: 3px solid #E0E0E0;
+
+  padding-top: 5px;
+	border-radius: 15px;
+	justify-content:space-evenly;
+	align-items:center ;
+	flex-wrap: wrap;
+
+}
+
+.informa{
+  width: 100%;
+  text-align: center;
+}
+
+#emoseccion label{
+  margin: 0px;
+}
+
+
+
+/* HIDE RADIO */
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+  background-color: #E5E5E5;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.emo{
+	width:50px;
+}

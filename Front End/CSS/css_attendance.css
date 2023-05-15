@@ -1,15 +1,14 @@
 
 body{
-    height: 10vh;
+    height: 100vh;
     position: relative;
     width: 100%;
-    overflow:auto;
-
+    overflow:auto; 
+    
 }
 
 main{
     position: absolute;
-    height: 100vh;
     width: calc(100% - 78px);
     left:78px;
     display: flex;

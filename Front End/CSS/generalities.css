@@ -78,3 +78,7 @@ html{
   font-family: 'Montserrat Bold';
   src: url('../Fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
 }
+
+.hidden {
+  display: none !important;
+}

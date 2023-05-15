@@ -11,11 +11,11 @@
   <link rel="stylesheet"  type="text/css" href="CSS/generalities.css">  <!-- {% static 'CSS/generalities.css' %} -->    
   <link rel="stylesheet"  type="text/css" href="CSS/bgs.css">  <!-- {% static 'CSS/bgs.css' %} -->  
   <link rel="stylesheet"  type="text/css" href="CSS/menu.css">   <!-- {% static 'CSS/menu.css' %} --> 
-  <link rel="stylesheet"  type="text/css" href="CSS/css_attendance.css"> <!-- {% static 'CSS/css_attendance.css'%} -->
+  <link rel="stylesheet"  type="text/css" href="CSS/css_Reports.css"> <!-- {% static 'CSS/css_Reports.css'%} -->
   
   <title>Pase de lista</title>
 </head>
-<body class="bg_0">
+<body class="bg_9">
   <div class="sidebar">
     <div class="logo_content"> <!--WIP: Se debe ocultar mostrar/ocultar las funciones condforma al usuario  -->
       <div class="logo">
@@ -70,7 +70,8 @@
     <div class="profile_content">
       <div class="profile">
         <div class="profile_details">
-          <img src="Imp/Profile.jpg" onerror="if (this.src != 'Media/m_profile.svg') this.src = 'Media/m_profile.svg';" alt="{{ $fullname }}"> <!-- {% static 'Imp/Profile.jpg' %} {% static 'Media/m_profile.svg' %} {% static 'Media/m_profile.svg' %} -->          <div class="name_job">
+          <img src="Imp/Profile.jpg" onerror="if (this.src != 'Media/m_profile.svg') this.src = 'Media/m_profile.svg';" alt="{{ $fullname }}"> <!-- {% static 'Imp/Profile.jpg' %} {% static 'Media/m_profile.svg' %} {% static 'Media/m_profile.svg' %} -->
+          <div class="name_job">
             <div class="name"><span id="nombre y apellido">Meredith Grey</span></div>
             <div class="job"><span id="rol">Doctora</span></div>
           </div>
@@ -81,64 +82,122 @@
     </div>
   </div>
   <main>
-    <section class="list">
-      <div class="attendance_container">
-        <div class="attence_info"> <!-- WIP: El backend debe modificar el titulo de la lista -->
-          <h1>{{ $Turno}} de {{ $Salon}} </h1> <!-- Titulo del pase de lista -->
-          <p>Lista de asistencia del salon, recuerde que puede deshacer cambios antes de una hora despues de que el menor haya ingresado al plantel.</p>
+    <section class="report">
+      <div class="report_container">
+        <div class="report_info"> <!-- WIP: El backend debe modificar el titulo de la lista -->
+          <img src="Imp/Child.jpg" onerror="if (this.src != 'Media/Child.svg') this.src = 'Media/Child.svg';" alt="{{ $Menor }}"> 
+          <h1>Diagnostico de Juan Perez Rodriguez </h1> <!-- Titulo del pase de lista -->
+          <h2>Viernes, 13 de Mayonesa</h2>
+          <p>
+            Completa detenidamente los campos solicitados, el reporte puede ser modificado durante la estancia del menor en el lugar
+          </p>
         </div>
-        <div class="attendence_list"> <!-- WIP: El backend debe rellenar la lista con los alumnos a los que el profesor puede acceder, ademas, debe ocultar los alumnos que ya ingrasaron mas alla de la una hora antes -->
-          <!-- Inicia Plantilla Menor -->
-          <div class="enlisted">
-            <span class="child"> <!-- Nombre del menor -->
-              Juan Perez
-            </span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-contact"><path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><circle cx="12" cy="10" r="2"></circle><line x1="8" x2="8" y1="2" y2="4"></line><line x1="16" x2="16" y1="2" y2="4"></line></svg>
-          </div> <!-- Boton Ajax de la credencial --><!-- WIP: Esta sección se encuentra aun en una etapa conceptual -->
-          <!-- Termina Plantilla Menor -->
-          <div class="enlisted">
-            <span class="child">
-              Esponda Cervantes Alfredo Daniel
-            </span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-contact"><path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><circle cx="12" cy="10" r="2"></circle><line x1="8" x2="8" y1="2" y2="4"></line><line x1="16" x2="16" y1="2" y2="4"></line></svg>
+        <form action="" id="doctor_report" class="report_data">
+          
+          
+          <div id="presion">
+            <h2>Presion Arterial</h2>
+            <input id="sistolica" type="number">
+            <p>/</p>
+            <input id="diastolica" type="number"> 
           </div>
-          <div class="enlisted">
-            <span class="child">
-              Martinez Barragan Martin
-            </span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-contact"><path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><circle cx="12" cy="10" r="2"></circle><line x1="8" x2="8" y1="2" y2="4"></line><line x1="16" x2="16" y1="2" y2="4"></line></svg>
+          <label for="temperatura">Temperatura</label>
+          <input id="temperatura" type="number">
+          <label for="glucosa">Glucosa</label>
+          <input id="glucosa" type="number">
+          <label for="oxigeno">Oxigenación</label>
+          <input id="oxigeno" type="number"><!-- Porcentaje falta-->
+          <div id="detalles">
+            <label for="sintomas">Sintomas</label>
+            <textarea id="sintomas" type="text"></textarea>
+            <label for="diagnostico">Diagnostico</label>
+            <textarea id="diagnostico" type="text"></textarea>
+            <label for="observaciones">Observaciones</label>
+            <textarea id="observaciones" type="text"></textarea>
+            
+
           </div>
-          <div class="enlisted">
-            <span class="child">
-              Martinez Barragan Martin
-            </span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-contact"><path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><circle cx="12" cy="10" r="2"></circle><line x1="8" x2="8" y1="2" y2="4"></line><line x1="16" x2="16" y1="2" y2="4"></line></svg>
+        </form>
+        <form action="" id="profesor_report" class="report_data">
+          <div class="block">
+            <h2>Idas al Baño</h2>
+            <label for="evacuaciones">Evacuaciones</label>
+            <input id="evacuaciones" type="number">
+            <label for="micciones">Micciones</label>
+            <input id="micciones" type="number">
           </div>
-          <div class="enlisted">
-            <span class="child">
-              Martinez Barragan Martin
-            </span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-contact"><path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><circle cx="12" cy="10" r="2"></circle><line x1="8" x2="8" y1="2" y2="4"></line><line x1="16" x2="16" y1="2" y2="4"></line></svg>
+          
+          <div class="block">
+            <h2>Cambios de ropa</h2>
+            <label for="ropa">Ropa</label>
+            <input id="ropa" type="number">
+            <label for="limpia">Limpia</label>
+            <input id="limpia" type="number">
+            <label for="sucia">Sucia</label>
+            <input id="sucia" type="number">
           </div>
-          <div class="enlisted">
-            <span class="child">
-              Martinez Barragan Martin
-            </span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-contact"><path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><circle cx="12" cy="10" r="2"></circle><line x1="8" x2="8" y1="2" y2="4"></line><line x1="16" x2="16" y1="2" y2="4"></line></svg>
+
+          <div class="block">
+            <label for="hora_entrada">Hora de Arribo</label>
+            <input id="hora_entrada" type="time">
+
+            <label for="suenio">Minutos de sueño</label>
+            <input id="suenio" type="number">
+            
+              
+            <label class="informa" for="incidencias">Incidencias</label>
+            <textarea id="incidencias" type="text"></textarea>
+            <label class="informa" for="comentarios">Comentarios</label>
+            <textarea id="comentarios" type="text"></textarea>  
+          
+            <h2 id="emo_titulo">Estado de animo</h2>
+            <div id="emoseccion">
+              <label>
+                <input type="radio" name="emotion" value="1" required >
+                <img src="Media/Feliz.png" alt="Feliz" class="emo">
+              </label>
+
+              <label>
+                <input type="radio" name="emotion" value="2" required >
+                <img src="Media/Calmado.png" alt="Calmado" class="emo">
+              </label>
+
+              <label>
+                <input type="radio" name="emotion" value="3" required>
+                <img src="Media/Enojado.png" alt="Enojado" class="emo">
+              </label>
+
+              <label>
+                <input type="radio" name="emotion" value="4" required>
+                <img src="Media/Triste.png" alt="Triste" class="emo">
+              </label>
+
+              <label>
+                <input type="radio" name="emotion" value="5" required>
+                <img src="Media/Enfermo.png" alt="Enfermo" class="emo">
+              </label>
+            </div>
           </div>
-          <div class="enlisted">
-            <span class="child">
-              Martinez Barragan Martin
-            </span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-contact"><path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><circle cx="12" cy="10" r="2"></circle><line x1="8" x2="8" y1="2" y2="4"></line><line x1="16" x2="16" y1="2" y2="4"></line></svg>
+          
+          <div class="block">
+            <h2>Alimentación</h2>
+            <label for="desayuno">Desayuno</label>
+            <input list="Comidas" id="desayuno" class="comida_op" name="desayuno_status"  required />
+            <label for="comida">Comida</label>
+            <input list="Comidas" id="comida" class="comida_op" name="comida_status"  required />
+            <label for="colacion">Colación</label>
+            <input list="Comidas" id="colacion" class="comida_op" name="colacion_status"  required />
+            <label for="cena">Cena</label>
+            <input list="Comidas" id="cena" class="comida_op" name="cena_status"  required />
+
+            <datalist id="Comidas">
+              <option value="NQN" /> 
+              <option value="NT" />
+              <option value="CT" />
+            </datalist>
+
           </div>
-          <div class="enlisted">
-            <span class="child">
-              Santiago Morales Andrea Karina
-            </span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-contact"><path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><circle cx="12" cy="10" r="2"></circle><line x1="8" x2="8" y1="2" y2="4"></line><line x1="16" x2="16" y1="2" y2="4"></line></svg>
-          </div>
-        </div>
+        </form>
       </div>  
     </section>
   </main>

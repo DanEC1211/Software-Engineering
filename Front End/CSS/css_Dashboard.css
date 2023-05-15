@@ -234,10 +234,17 @@ main .my_events h2{
 @media (max-width:1535px){
   main .my_events{
     width: 90%;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    
   }
   main .lateral {
     width: 90%;
     min-width: none;
+    margin-bottom:40px;
+  }
+
+  .event_container{
     margin-bottom:40px;
   }
 
